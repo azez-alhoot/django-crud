@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h2>Blogs Detail</h2>
+<ul>
+    <li>{{post.title}}</li>
+    <li>{{post.author}}</li>
+    <li>{{post.body}}</li>
+</ul>
+<a href="{% url 'update_plog' post.pk%}">Update</a>
+<a href="{% url 'delete_plog' post.pk%}">Delete</a>
+{% endblock content %}
